@@ -15,6 +15,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Test {
 
 	public static void main(String[] args) {
+		System.out.println("in local repository");
 		System.setProperty("webdriver.chrome.driver","D:\\Selenium data\\chromedriver_win32(1)\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.in/");
@@ -23,6 +24,8 @@ public class Test {
 		String opentab=Keys.chord(Keys.CONTROL,Keys.ENTER);
 		WebElement youramzonin=driver.findElement(By.id("nav-your-amazon"));
 		youramzonin.sendKeys(opentab);
+		
+		System.out.println("changes in eclipse code");
 		
 		Set<String> abc=driver.getWindowHandles();
 		Iterator<String>itr=abc.iterator();
@@ -33,6 +36,7 @@ public class Test {
 			String Title=driver.getTitle();
 			System.out.println(Title);
 		
+			System.out.println("changes in eclipse code");
 		if(Title.equalsIgnoreCase("Your Amazon.in"))
 		{
 			boolean flag=driver.findElement(By.xpath("//input[@name='email']")).isDisplayed();
